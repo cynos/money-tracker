@@ -1,0 +1,1 @@
+import{d as s}from"./index-XR5uOQR1.js";const c="local-data";function r(e,a){const t=s(e,a,{deep:!0,listenToStorageChanges:!0});return{storageRef:t,setItem:o=>{t.value=o},getItem:()=>t.value}}const{storageRef:u,setItem:m}=r(c,{});export{u as l,m as s};
