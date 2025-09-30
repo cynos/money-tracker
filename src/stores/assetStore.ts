@@ -6,7 +6,6 @@ import { useDBStore } from './dbStore'
 
 export interface MetaType {
   balance: number
-  lastUsed?: string
   restBalance: number
 }
 

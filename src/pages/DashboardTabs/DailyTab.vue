@@ -81,7 +81,6 @@ const assets = computed(() => {
   )
 
   return flattenItemGroup(assetStore.assets).map(v => {
-    const lastUsed = sortedTransactions.find(t => t.asset.id === v.id)
     const restBalance = sortedTransactions.reduce((sum, t) => {
       if (t.asset.id === v.id) {
         if (t.type === 'Outcome') {
@@ -94,7 +93,6 @@ const assets = computed(() => {
       return sum
     }, 0)
     if (v.meta) {
-      v.meta.lastUsed = lastUsed?.time.toISOString()
       v.meta.restBalance = (v.meta.balance || 0) - restBalance
     }
     return v
